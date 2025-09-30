@@ -5,6 +5,10 @@ describe('US-001-Funcionalidade: Busca de filmes', () => {
         cy.visit('/')
     });
 
+    afterEach(() => {
+        cy.screenshot()
+    });
+
     it('Deve buscar um filme com sucesso', () => {
 
         cy.get('#search-input').type('Transformers')
