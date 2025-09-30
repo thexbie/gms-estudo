@@ -2,18 +2,14 @@
 
 describe('US-012-Funcionalidade: Cadastro de membros', () => {
   beforeEach(() => {
-    cy.visit('/')  
+    cy.visit('/')
   });
 
   it('Deve fazer o cadastro de campos obrigatórios', () => {
 
     var email = `teste${Date.now()}@teste.com`;
 
-    cy.get('#search-input').type('Transformers')
-    cy.get('#search-button').click()
-
     cy.preencherCadastro('Vitor', 'Alves', email, '11999999999', 'Teste@123')
-
     cy.get('#signup-response').should('contain', 'Cadastro realizado com sucesso')
   })
 
