@@ -19,5 +19,8 @@
   "homepage": "https://github.com/thexbie/gms-estudo#readme",
   "dependencies": {
     "cypress": "^15.3.0"
+  },
+  "devDependencies": {
+    "faker": "^6.6.6"
   }
 }
